@@ -1,1 +1,1 @@
-{"local_port": 9091, "server": "us1.0bad.com", "server_port": 32143, "local_address": "0.0.0.0", "password": "dE58158B694E8486", "method": "aes-128-cfb"}
+{"local_port": 9091, "server": "2.2.2.2", "server_port": 12345, "local_address": "0.0.0.0", "password": "password", "method": "aes-128-cfb"}
