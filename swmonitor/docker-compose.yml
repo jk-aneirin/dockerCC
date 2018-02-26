@@ -1,0 +1,27 @@
+version: '2'
+services:
+    prometheus:
+        image: rycus86/prometheus
+        volumes:
+            - '/opt/swmonitor/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml'
+        ports:
+            - '9090:9090/tcp'
+
+    grafana:
+        image: grafana/grafana
+        volumes_from:
+            - grafana-storage
+        ports:
+            - '3000:3000/tcp'
+
+    grafana-storage:
+        image: busybox
+        volumes:
+            - '/tmp/grafana-storage:/var/lib/grafana'
+
+    snmp-exporter:
+        image: oakman/snmp-exporter
+        volumes:
+            - '/opt/swmonitor/snmp-exporter/snmp.yml:/config/snmp.yml'
+        ports:
+            - '9116:9116/tcp'
