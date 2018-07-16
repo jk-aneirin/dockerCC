@@ -1,0 +1,4 @@
+SERVER_ADDR=1.1.1.1
+SERVER_PORT=1080
+PASSWORD=verysecuritypassword
+METHOD=aes-128-cfb
